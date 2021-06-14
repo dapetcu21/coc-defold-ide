@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import * as vscode from "vscode";
+import * as vscode from "coc.nvim";
 
 import registerRefactorHashCommand from "./commandRefactorHash";
 

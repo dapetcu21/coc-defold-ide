@@ -5,21 +5,27 @@
 	"description": "Up-to-date autocomplete, API docs, snippets and more for the Defold game engine",
 	"version": "0.0.2",
 	"engines": {
-		"vscode": "^1.45.0"
+		"vscode": "^1.45.0",
+		"coc": "^0.0.80"
 	},
 	"categories": [
 		"Other"
 	],
 	"icon": "images/icon.png",
 	"activationEvents": [
-		"onCommand:defold-ide.refactorHash"
+		"onCommand:defold-ide.refactorHash",
+		"onCommand:defold-ide.refactorHashVisual"
 	],
-	"main": "./out/vscode/extension.js",
+	"main": "./out/vim/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "defold-ide.refactorHash",
-				"title": "Defold IDE: Refactor hash under selection"
+				"title": "Defold IDE: Refactor hash under cursor"
+			},
+			{
+				"command": "defold-ide.refactorHashVisual",
+				"title": "Defold IDE: Refactor hash under last visual selection"
 			}
 		],
 		"keybindings": [
@@ -68,10 +74,11 @@
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
-		"@types/node": "^10.17.60",
+		"@types/node": "^15.12.2",
 		"@types/vscode": "^1.45.0",
 		"@typescript-eslint/eslint-plugin": "^2.30.0",
 		"@typescript-eslint/parser": "^2.30.0",
+		"coc.nvim": "0.0.81-next.3",
 		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.1.2",
